@@ -31,52 +31,36 @@ public class MainController implements Initializable {
     
     @FXML
     protected void handleSubmitButtonAction() throws IOException{
-        connect con=new connect();
-        try {
-            con.createTableCustomer();
-            //con.createTableEmployee();
-            con.createTableSupplier();
-            con.createTableProduct();
-            
-//            con.insertEmployee("r", "r", "rukshani","kuru", 037);
-//            con.insertEmployee("ra", "ra", "ravishani","kuru", 0372);
-//            con.insertEmployee("nila", "nila", "nilakshika","kuru", 0372);
-//            con.insertEmployee("NILA", "nila", "nilakshika","kuru", 0372);
-            
-        //   con.deleteEmployee("NILA");
-                        
-        } catch (Exception ex) {
-            System.out.println("Exception "+ex);
-        }
         
-      //  try {
-//            Statement st = connect.getcon().createStatement();
-//            ResultSet rs=st.executeQuery("select * from EMPLOYEE");
+        
+        try {
+            Statement st = connect.getcon().createStatement();
+            ResultSet rs=st.executeQuery("select * from EMPLOYEE");
             String user=usernameField.getText();
             String pass=passwordField.getText();
             System.out.println("user:"+user+" pass:"+pass);
-//            String passdb;
-//            String userdb;
+            String passdb;
+            String userdb;
             
-          //  while (rs.next()) {
-              //  passdb=rs.getString("PASSWORD");
-             //   userdb=rs.getString("USERNAME");
-                String userdb1 = "A";
-                 String passdb1 = "a";
-                System.out.println(userdb1+" "+passdb1);
+            while (rs.next()) {
+                passdb=rs.getString("PASSWORD");
+                userdb=rs.getString("USERNAME");
+//                String userdb1 = "a";
+//                String passdb1 = "a";
+                System.out.println(userdb+" "+passdb);
 
-                if (pass.equals(passdb1)&& user.equals(userdb1)) { 
+                if (pass.equals(passdb)&& user.equals(userdb)) { 
                     actiontarget.setText("UserName and Password correct");                   
                     backToMainMenu();
                 } else {
                    // System.out.println("UserName and Password is invalid");
                     actiontarget.setText("UserName and Password is invalid");
                 }
-          // }
+           }
             
-     //   } catch (SQLException ex) {
-       //     System.out.println("ExceptionSQL"+ex);
-     //   } 
+        } catch (SQLException ex) {
+            System.out.println("ExceptionSQL"+ex);
+        } 
         
     }
     

@@ -61,8 +61,7 @@ public class connect {
            
        }}
       
-          public void createTableSupplier() throws SQLException {
-       
+    public void createTableSupplier() throws SQLException {       
         Statement st = connect.getcon().createStatement();
        try{ st.execute("CREATE TABLE "
           + supplierTable
@@ -78,7 +77,7 @@ public class connect {
            
        }}
           
-              public void createTableProduct() throws SQLException {
+    public void createTableProduct() throws SQLException {
         Statement st = connect.getcon().createStatement();
        try{ st.execute("CREATE TABLE "
           + productTable
@@ -143,12 +142,21 @@ public class connect {
     }
 
     public void createTableEmployee() throws SQLException {//        
-        Statement st = connect.getcon().createStatement();
+        try{Statement st = connect.getcon().createStatement();
         st.execute("CREATE TABLE "
           + employeeTable
           + "(username VARCHAR(25) NOT NULL PRIMARY KEY, password VARCHAR(25),name VARCHAR(25),address VARCHAR(50), phone INTEGER)");
         System.out.println("Created table "+ employeeTable);
-    }
+        } catch(SQLException e){
+           
+           if(tableAlreadyExists(e)){
+           
+           }else{
+               throw e;
+           }
+           
+       }}
+    
     public void insertEmployee(String username, String password, String name, String address, int phone) {
         try {
             Statement st = connect.getcon().createStatement();

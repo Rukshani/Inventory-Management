@@ -20,11 +20,17 @@ public class RuwanBook extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage=new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));        
+        Parent root = FXMLLoader.load(getClass().getResource("Start.fxml"));        
         Scene scene = new Scene(root,400,400);   
         stage.setTitle("IMS");
         stage.setScene(scene);
         stage.show();
+//        stage=new Stage();
+//        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));        
+//        Scene scene = new Scene(root,400,400);   
+//        stage.setTitle("IMS");
+//        stage.setScene(scene);
+//        stage.show();
     }
 
     /**

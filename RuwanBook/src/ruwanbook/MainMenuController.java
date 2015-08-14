@@ -53,4 +53,16 @@ public class MainMenuController implements Initializable {
             RuwanBook.getStage().show();
           }catch(Exception e){}
     }
+    
+     public void backToMainMenu(){
+         try{
+            Parent root1 = FXMLLoader.load(getClass().getResource("Main.fxml"));
+            Scene scene = new Scene(root1,400,400);
+            RuwanBook.getStage().setTitle("easyCash");
+            RuwanBook.getStage().setScene(scene);  
+            RuwanBook.getStage().show();
+          }catch(Exception e){
+              System.out.println("Exceptionmenu"+e);
+          }
+    }
 }

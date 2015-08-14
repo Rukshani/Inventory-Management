@@ -3,7 +3,7 @@
   <information>
     <title>RuwanBook</title>
     <vendor>rukshani</vendor>
-    <description>null</description>
+    <description>Sample JavaFX 2.0 application.</description>
     <offline-allowed/>
   </information>
   <resources>
@@ -11,10 +11,14 @@
   </resources>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="RuwanBook.jar" size="654679" download="eager" />
-    <jar href="lib/derby.jar" size="3284078" download="eager" />
-    <jar href="lib/derbyclient.jar" size="607296" download="eager" />
-    <jar href="lib/derbytools.jar" size="241360" download="eager" />
+    <jar href="RuwanBook.jar" size="659409" download="eager" />
+    <jar href="lib/deploy.jar" size="3975277" download="eager" />
+    <jar href="lib/derby.jar" size="3284079" download="eager" />
+    <jar href="lib/derbyclient.jar" size="607293" download="eager" />
+    <jar href="lib/derbytools.jar" size="241363" download="eager" />
+    <jar href="lib/javaws.jar" size="927402" download="eager" />
+    <jar href="lib/jfxrt.jar" size="15500367" download="eager" />
+    <jar href="lib/plugin.jar" size="1943554" download="eager" />
   </resources>
 <security>
   <all-permissions/>
