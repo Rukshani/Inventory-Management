@@ -5,11 +5,7 @@
 package ruwanbook;
 
 import java.net.URL;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -50,8 +46,7 @@ public class SigninController implements Initializable {
             con.insertEmployee(username, password, name, address, int_phone);            
         } catch (Exception ex) {
             System.out.println("Sign in error "+ex);
-        }
-       
+        }       
         
        try{
             Parent root1 = FXMLLoader.load(getClass().getResource("Main.fxml"));           
