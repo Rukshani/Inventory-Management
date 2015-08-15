@@ -6,8 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ruwanbook.SigninController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0"  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ruwanbook.SigninController">
    <children>
       <Label layoutX="14.0" layoutY="14.0" text="Sign In " />
       <Label layoutX="14.0" layoutY="40.0" text="Username:" />

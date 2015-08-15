@@ -6,14 +6,10 @@ package ruwanbook;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -30,8 +26,7 @@ public class MainController implements Initializable {
      @FXML private PasswordField passwordField;
     
     @FXML
-    protected void handleSubmitButtonAction() throws IOException{
-        
+    protected void handleSubmitButtonAction() throws IOException{        
         
         try {
             Statement st = connect.getcon().createStatement();

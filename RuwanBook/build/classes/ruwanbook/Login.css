@@ -10,6 +10,7 @@
     display: block;
     -fx-background-image: url("pic.jpg");
 }
+
 /*
 The background image is applied to the .root style, which means it is applied to the root node of the Scene instance
 */

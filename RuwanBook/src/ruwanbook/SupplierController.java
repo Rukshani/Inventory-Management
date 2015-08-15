@@ -11,6 +11,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
+/**
+ *
+ * @author Bhashi
+ */
+
 public class SupplierController implements Initializable{
     
      @FXML private TextField supID;

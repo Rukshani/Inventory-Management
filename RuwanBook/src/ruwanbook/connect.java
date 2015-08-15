@@ -5,13 +5,9 @@
 package ruwanbook;
 
 import java.sql.Connection;
-import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -105,41 +101,41 @@ public class connect {
       return exists;
       }
 
-    public void insertCustomer(int id, String name, String address, int phone) {
-        try {
-            Statement st = connect.getcon().createStatement();
-            String sqlins = "INSERT INTO " + customerTable + " VALUES(" + id + ",\'" + name + "\',\'" + address + "\'," + phone + ")";
-            st.execute(sqlins);
-            st.close();
-
-        } catch (SQLException ex) {
-            System.out.println("Insert error " + customerTable + ex);
-        }
-    }
-
-    public void deleteCustomer(int id) {
-        try {
-            Statement ps = connect.getcon().createStatement();
-            String sqldel = "DELETE FROM " + customerTable + " WHERE id=" + id + "";
-            ps.execute(sqldel);
-            System.out.println("deleted " + id);
-        } catch (SQLException ex) {
-            System.out.println("Delete error " + customerTable + ex);
-        }
-    }
-
-    public void updateCustomer(int id, String name, String address, int phone) {
-        try {
-            Statement ps = connect.getcon().createStatement();
-            String sqlup = "UPDATE " + customerTable + " SET "
-                    + "name=\'" + name + "\', address=\'" + address + "\', phone=" + phone + " WHERE id=" + id + "";
-            ps.execute(sqlup);
-
-            System.out.println("Updated " + id);
-        } catch (SQLException ex) {
-            System.out.println("Update error " + customerTable + ex);
-        }
-    }
+//    public void insertCustomer(int id, String name, String address, int phone) {
+//        try {
+//            Statement st = connect.getcon().createStatement();
+//            String sqlins = "INSERT INTO " + customerTable + " VALUES(" + id + ",\'" + name + "\',\'" + address + "\'," + phone + ")";
+//            st.execute(sqlins);
+//            st.close();
+//
+//        } catch (SQLException ex) {
+//            System.out.println("Insert error " + customerTable + ex);
+//        }
+//    }
+//
+//    public void deleteCustomer(int id) {
+//        try {
+//            Statement ps = connect.getcon().createStatement();
+//            String sqldel = "DELETE FROM " + customerTable + " WHERE id=" + id + "";
+//            ps.execute(sqldel);
+//            System.out.println("deleted " + id);
+//        } catch (SQLException ex) {
+//            System.out.println("Delete error " + customerTable + ex);
+//        }
+//    }
+//
+//    public void updateCustomer(int id, String name, String address, int phone) {
+//        try {
+//            Statement ps = connect.getcon().createStatement();
+//            String sqlup = "UPDATE " + customerTable + " SET "
+//                    + "name=\'" + name + "\', address=\'" + address + "\', phone=" + phone + " WHERE id=" + id + "";
+//            ps.execute(sqlup);
+//
+//            System.out.println("Updated " + id);
+//        } catch (SQLException ex) {
+//            System.out.println("Update error " + customerTable + ex);
+//        }
+//    }
 
     public void createTableEmployee() throws SQLException {//        
         try{Statement st = connect.getcon().createStatement();
