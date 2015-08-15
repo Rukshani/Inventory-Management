@@ -1,75 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0"  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ruwanbook.ProductController">
-   <children>
-      <AnchorPane layoutX="14.0" layoutY="28.0" prefHeight="402.0" prefWidth="600.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <ImageView fitHeight="454.0" fitWidth="633.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Images/back.png" />
-               </image>
-            </ImageView>
-            <ListView layoutX="13.0" layoutY="21.0" opacity="0.52" prefHeight="319.0" prefWidth="305.0" />
-            <Button blendMode="MULTIPLY" layoutX="14.0" layoutY="401.0" mnemonicParsing="false" opacity="0.0" prefHeight="46.0" prefWidth="57.0" style="-fx-background-color: #0099FF;">
-               <effect>
-                  <InnerShadow />
-               </effect>
-            </Button>
-            <ImageView fitHeight="37.0" fitWidth="42.0" layoutX="24.0" layoutY="406.0" onMouseClicked="#backToMainMenu" opacity="0.95" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Images/back_2.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="239.0" layoutY="354.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Details">
-               <effect>
-                  <DropShadow />
-               </effect>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-            <BorderPane layoutX="337.0" layoutY="21.0" opacity="0.49" prefHeight="319.0" prefWidth="260.0" style="-fx-background-color: #DFDFE1;" />
-            <Label layoutX="370.0" layoutY="30.0" text="Add Products">
-               <font>
-                  <Font name="System Bold" size="21.0" />
-               </font>
-            </Label>
-            <TextField layoutX="457.0" layoutY="75.0" prefHeight="25.0" prefWidth="134.0" />
-            <Label layoutX="353.0" layoutY="78.0" text="Product Name">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="353.0" layoutY="124.0" text="Supplier">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField layoutX="457.0" layoutY="121.0" prefHeight="25.0" prefWidth="134.0" />
-            <TextField layoutX="457.0" layoutY="168.0" prefHeight="25.0" prefWidth="134.0" />
-            <Label layoutX="353.0" layoutY="171.0" text="Price per piece">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <Button layoutX="436.0" layoutY="227.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" text="Add">
-               <font>
-                  <Font size="16.0" />
-               </font>
-               <effect>
-                  <DropShadow />
-               </effect>
-            </Button>
-         </children>
-      </AnchorPane>
-   </children>
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ruwanbook.ProductController">
+  <children>
+    <AnchorPane prefHeight="402.0" prefWidth="600.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <ImageView fitHeight="653.0" fitWidth="870.6666666666666" layoutX="-1.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../Images/back.png" />
+          </image>
+        </ImageView>
+        <ListView layoutX="13.0" layoutY="21.0" opacity="0.52" prefHeight="319.0" prefWidth="305.0" />
+        <Button blendMode="MULTIPLY" layoutX="14.0" layoutY="401.0" mnemonicParsing="false" opacity="0.0" prefHeight="46.0" prefWidth="57.0" style="-fx-background-color: #0099FF;">
+          <effect>
+            <InnerShadow />
+          </effect>
+        </Button>
+        <ImageView fitHeight="37.0" fitWidth="42.0" layoutX="24.0" layoutY="406.0" onMouseClicked="#backToMainMenu" opacity="0.95" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../Images/back_2.png" />
+          </image>
+        </ImageView>
+        <Button layoutX="239.0" layoutY="354.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Details">
+          <effect>
+            <DropShadow />
+          </effect>
+          <font>
+            <Font size="16.0" fx:id="x2" />
+          </font>
+        </Button>
+        <Label layoutX="370.0" layoutY="30.0" text="Add Products">
+          <font>
+            <Font name="System Bold" size="21.0" />
+          </font>
+        </Label>
+        <TextField fx:id="serial" layoutX="457.0" layoutY="75.0" prefHeight="25.0" prefWidth="134.0" />
+        <Label layoutX="353.0" layoutY="78.0" text="serial number">
+          <font>
+            <Font size="13.0" fx:id="x1" />
+          </font>
+        </Label>
+        <Label font="$x1" layoutX="353.0" layoutY="124.0" text="Name" />
+        <TextField fx:id="name" layoutX="457.0" layoutY="121.0" prefHeight="25.0" prefWidth="134.0" />
+        <TextField fx:id="description" layoutX="457.0" layoutY="168.0" prefHeight="25.0" prefWidth="134.0" />
+        <Label font="$x1" layoutX="353.0" layoutY="171.0" text="description" />
+        <Button font="$x2" layoutX="338.0" layoutY="483.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" text="Add" onAction="#addProduct">
+          <effect>
+            <DropShadow />
+          </effect>
+        </Button>
+        <Label font="$x1" layoutX="353.0" layoutY="209.0" text="price" />
+        <TextField id="description" fx:id="price" layoutX="456.0" layoutY="209.0" prefHeight="25.0" prefWidth="134.0" />
+        <Label font="$x1" layoutX="353.0" layoutY="244.0" text="Quantity" />
+        <TextField id="description" fx:id="quantity" layoutX="457.0" layoutY="240.0" prefHeight="25.0" prefWidth="134.0" />
+        <Label font="$x1" layoutX="351.0" layoutY="273.0" text="Category" />
+        <TextField id="description" fx:id="category" layoutX="456.0" layoutY="273.0" prefHeight="25.0" prefWidth="134.0" />
+        <Label font="$x1" layoutX="360.0" layoutY="309.0" text="Brand" />
+        <TextField id="description" fx:id="brand" layoutX="456.0" layoutY="305.0" prefHeight="25.0" prefWidth="134.0" />
+        <Label font="$x1" layoutX="356.0" layoutY="345.0" text="Total price" />
+        <TextField id="description" fx:id="totPrice" layoutX="457.0" layoutY="336.0" prefHeight="25.0" prefWidth="134.0" />
+        <Label font="$x1" layoutX="357.0" layoutY="374.0" text="Supplier id" />
+        <TextField id="description" fx:id="suppId" layoutX="457.0" layoutY="369.0" prefHeight="25.0" prefWidth="134.0" />
+        <Label font="$x1" layoutX="360.0" layoutY="407.0" text="Stock level" />
+        <TextField id="description" fx:id="stockLevel" layoutX="457.0" layoutY="401.0" prefHeight="25.0" prefWidth="134.0" />
+        <Label font="$x1" layoutX="357.0" layoutY="427.0" prefHeight="29.0" text="Image URL" />
+        <TextField id="description" fx:id="image" layoutX="456.0" layoutY="435.0" prefHeight="25.0" prefWidth="134.0" />
+        <Button layoutX="484.0" layoutY="491.0" mnemonicParsing="false" text="Delete" onAction="#deleteProduct" />
+        <Button layoutX="578.0" layoutY="492.0" mnemonicParsing="false" text="Update" onAction="#updateProduct" />
+      </children>
+    </AnchorPane>
+  </children>
 </AnchorPane>

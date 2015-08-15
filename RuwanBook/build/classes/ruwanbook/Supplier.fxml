@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0"  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ruwanbook.SupplierController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ruwanbook.SupplierController">
   <children>
     <AnchorPane prefHeight="402.0" prefWidth="600.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
@@ -61,8 +61,8 @@
         <TextField fx:id="supPhone" layoutX="457.0" layoutY="246.0" prefHeight="25.0" prefWidth="134.0" />
         <Label font="$x1" layoutX="351.0" layoutY="291.0" text="Company" />
         <TextField fx:id="supCompnay" layoutX="457.0" layoutY="288.0" prefHeight="25.0" prefWidth="134.0" />
-        <Button layoutX="479.0" layoutY="362.0" mnemonicParsing="false" onAction="#updateSupplier" prefHeight="25.0" prefWidth="73.0" text="Update" />
-        <Button layoutX="591.0" layoutY="362.0" mnemonicParsing="false" onAction="#deleteSupplier" prefHeight="25.0" prefWidth="66.0" text="Delete" />
+        <Button layoutX="479.0" layoutY="362.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Update" onAction="#updateSupplier" />
+        <Button layoutX="591.0" layoutY="362.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="Delete" onAction="#deleteSupplier"/>
       </children>
     </AnchorPane>
   </children>

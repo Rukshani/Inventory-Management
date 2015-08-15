@@ -234,37 +234,37 @@ public class connect {
 
     }
 
-    void insertProduct(int productID, String productDes, String productCategory, String productBrand, String prodSuppName, int noOfItems) {
-        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        try {
-            Statement st = connect.getcon().createStatement();
-            System.out.println(productID + " " + productDes + " " + productCategory + " " + productBrand + " " + prodSuppName + " " + noOfItems);
-            // String supplierT = "SUPPLIER";
-            String sqlins = "INSERT INTO " + productTable + " VALUES(" + productID + ",\'" + productDes + "\',\'" + productCategory + "\',\'" + productBrand + "\',\'" + prodSuppName + "\'," + noOfItems + ")";
-            st.execute(sqlins);
-            st.close();
+//    public void insertProduct(int productID, String productDes, String productCategory, String productBrand, String prodSuppName, int noOfItems) {
+//        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//        try {
+//            Statement st = connect.getcon().createStatement();
+//            System.out.println(productID + " " + productDes + " " + productCategory + " " + productBrand + " " + prodSuppName + " " + noOfItems);
+//            // String supplierT = "SUPPLIER";
+//            String sqlins = "INSERT INTO " + productTable + " VALUES(" + productID + ",\'" + productDes + "\',\'" + productCategory + "\',\'" + productBrand + "\',\'" + prodSuppName + "\'," + noOfItems + ")";
+//            st.execute(sqlins);
+//            st.close();
+//
+//        } catch (SQLException ex) {
+//            System.out.println("Insert error " + productTable + ex);
+//        }
+//
+//    }
 
-        } catch (SQLException ex) {
-            System.out.println("Insert error " + productTable + ex);
-        }
-
-    }
-
-    void updateProduct(int productID, String productDes, String productCategory, String productBrand, String prodSuppName, int noOfItems) {
-        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.println(productID);
-        try {
-            Statement ps = connect.getcon().createStatement();
-            String sqlup = "UPDATE " + productTable + " SET "
-                    + "productid=\'" + productID + "\', description=\'" + productDes + "\', noofitems=" + noOfItems + " WHERE PRODUCTID=" + productID + "";
-            ps.execute(sqlup);
-
-            System.out.println("Updated " + productID);
-        } catch (SQLException ex) {
-            System.out.println("Update error " + productTable + ex);
-        }
-
-    }
+//    public void updateProduct(int productID, String productDes, String productCategory, String productBrand, String prodSuppName, int noOfItems) {
+//        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//        System.out.println(productID);
+//        try {
+//            Statement ps = connect.getcon().createStatement();
+//            String sqlup = "UPDATE " + productTable + " SET "
+//                    + "productid=\'" + productID + "\', description=\'" + productDes + "\', noofitems=" + noOfItems + " WHERE PRODUCTID=" + productID + "";
+//            ps.execute(sqlup);
+//
+//            System.out.println("Updated " + productID);
+//        } catch (SQLException ex) {
+//            System.out.println("Update error " + productTable + ex);
+//        }
+//
+//    }
 
     void deleteProduct(int int_productId) {
        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -275,6 +275,38 @@ public class connect {
             System.out.println("deleted " + int_productId);
         } catch (SQLException ex) {
             System.out.println("Delete error " + productTable + ex);
+        }
+    
+    }
+    
+    void insertProduct(int int_serialNumber, String proName, String proDescription, int int_price, int int_quantity, String proCategory, String proBrand, int int_totPrice, int int_suppId, int int_stockLevel, String imageUrl) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            Statement st = connect.getcon().createStatement();
+            System.out.println(int_serialNumber + " " + proName + " " + proDescription + " " + int_price + " " + int_quantity + " " + proCategory);
+            // String supplierT = "SUPPLIER";
+                String sqlins = "INSERT INTO " + productTable + " VALUES(" + int_serialNumber + ",\'" + proName + "\',\'" + proDescription + "\'," + int_price + "," + int_quantity + ",\'" + proCategory + "\',\'" + proBrand + "\'," + int_totPrice + "," + int_suppId + "," + int_stockLevel + ",\'" + imageUrl + "\')";
+               st.execute(sqlins);
+            st.close();
+
+        } catch (SQLException ex) {
+            System.out.println("Insert error " + productTable + ex);
+        }
+    }
+
+    void updateProduct(int int_serialNumber, String proName, String proDescription, int int_price, int int_quantity, String proCategory, String proBrand, int int_totPrice, int int_suppId, int int_stockLevel, String imageUrl) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   
+            System.out.println(int_serialNumber);
+        try {
+            Statement ps = connect.getcon().createStatement();
+            String sqlup = "UPDATE " + productTable + " SET "
+                    + "NAME=\'" + proName + "\', DESCRIPTION=\'" + proDescription + "\', PRICE=" + int_price + " WHERE SERIALNUMBER=" + int_serialNumber + "";
+            ps.execute(sqlup);
+
+         //   System.out.println("Updated " + int_supId);
+        } catch (SQLException ex) {
+            System.out.println("Update error " + supplierTable + ex);
         }
     
     }
